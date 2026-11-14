@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18"><title>Painel | Fisch Codes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+<header><div class="wrap topbar"><a class="brand" href="index.html"><span class="logo">🎣</span> Fisch Codes</a><a class="admin-link" href="index.html">Ver site ↗</a></div></header>
+<main class="wrap admin-main">
+  <div class="admin-heading"><div class="eyebrow">ÁREA RESTRITA</div><h1>Painel <span>Admin</span></h1><p class="muted">Gerencie os códigos sem editar arquivos.</p></div>
+  <section id="loginPanel" class="panel narrow">
+    <h2>Entrar</h2><form id="loginForm" class="form">
+      <label>E-mail<input id="email" type="email" autocomplete="username" required></label>
+      <label>Senha<input id="password" type="password" autocomplete="current-password" required></label>
+      <button class="primary" type="submit">Entrar no painel</button>
+      <p id="loginMessage" class="message"></p>
+    </form>
+    <p class="muted tiny">A conta administrativa deve ser criada por você no painel do Supabase. Não existe cadastro público.</p>
+  </section>
+  <section id="dashboard" hidden>
+    <div class="dashboard-top"><h2>Seus códigos</h2><button id="logout" class="secondary">Sair</button></div>
+    <section class="panel">
+      <h3 id="formTitle">Adicionar código</h3>
+      <form id="codeForm" class="form">
+        <input id="codeId" type="hidden">
+        <label>Código<input id="code" maxlength="100" placeholder="Ex.: NOVOCODIGO" required></label>
+        <label>Recompensa<input id="reward" maxlength="180" placeholder="Ex.: 2.000 moedas"></label>
+        <label>Status<select id="status"><option value="active">Ativo</option><option value="expired">Expirado</option></select></label>
+        <div class="form-actions"><button class="primary" type="submit">Salvar código</button><button id="cancelEdit" class="secondary" type="button" hidden>Cancelar edição</button></div>
+        <p id="formMessage" class="message"></p>
+      </form>
+    </section>
+    <div id="adminCodeList" class="admin-list"></div>
+  </section>
+  <p class="notice">Dica: quando salvar aqui, a lista pública será atualizada automaticamente na próxima consulta.</p>
+</main>
+<footer class="wrap">Fisch Codes · Painel administrativo</footer>
+<script src="admin.js"></script>
+</body></html>
