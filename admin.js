@@ -1,6 +1,6 @@
 const cfg = window.FISCH_CONFIG || {};
 const configured = cfg.SUPABASE_URL && cfg.SUPABASE_ANON_KEY &&
-  !cfg.SUPABASE_URL.startsWith("COLE_AQUI") && !cfg.SUPABASE_ANON_KEY.startsWith("COLE_AQUI");
+  !cfg.SUPABASE_URL.startsWith("https://vixgicjyzfhlkmshkpnk.supabase.co/rest/v1/") && !cfg.SUPABASE_ANON_KEY.startsWith("sb_publishable_LodaEQlAFVDWwDCYQ3ihFQ_feil26L7");
 const loginPanel = document.getElementById("loginPanel");
 const dashboard = document.getElementById("dashboard");
 const loginMessage = document.getElementById("loginMessage");
