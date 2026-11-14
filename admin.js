@@ -1,6 +1,11 @@
 const cfg = window.FISCH_CONFIG || {};
 const configured = cfg.SUPABASE_URL && cfg.SUPABASE_ANON_KEY &&
-  !cfg.SUPABASE_URL.startsWith("https://vixgicjyzfhlkmshkpnk.supabase.co") && !cfg.SUPABASE_ANON_KEY.startsWith("sb_publishable_LodaEQlAFVDWwDCYQ3ihFQ_feil26L7");
+  const configured = !!(
+  cfg.SUPABASE_URL &&
+  cfg.SUPABASE_ANON_KEY &&
+  cfg.SUPABASE_URL.startsWith("https://") &&
+  !cfg.SUPABASE_ANON_KEY.startsWith("chave oculta")
+);
 const loginPanel = document.getElementById("loginPanel");
 const dashboard = document.getElementById("dashboard");
 const loginMessage = document.getElementById("loginMessage");
