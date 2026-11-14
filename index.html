@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18"><title>Fisch Codes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+</head>
+<body>
+<header><div class="wrap topbar"><a class="brand" href="index.html"><span class="logo">🎣</span> Fisch Codes</a><a class="admin-link" href="admin.html">Painel admin ↗</a></div></header>
+<section class="hero wrap">
+  <div class="eyebrow">ROBLOX · FISCH</div><h1>Fisch <span>Codes</span></h1>
+  <p>Encontre códigos, copie com um clique e volte para a pescaria.</p>
+  <div class="stats">
+    <div class="stat"><strong id="activeCount">0</strong><small>Ativos</small></div>
+    <div class="stat"><strong id="expiredCount">0</strong><small>Expirados</small></div>
+    <div class="stat"><strong id="totalCount">0</strong><small>Total</small></div>
+  </div>
+</section>
+<main class="wrap">
+  <div class="section-head"><h2>📜 Lista de códigos</h2><span id="updatedAt" class="muted">Carregando...</span></div>
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Pesquisar código...">
+    <div class="filters">
+      <button class="filter active" data-filter="all">Todos</button>
+      <button class="filter" data-filter="active">Ativos</button>
+      <button class="filter" data-filter="expired">Expirados</button>
+    </div>
+  </div>
+  <div id="codeList" class="grid"><div class="empty">Carregando códigos...</div></div>
+  <p class="notice">⚠️ Fisch Codes é um projeto independente de fãs e não é afiliado aos criadores do Fisch. A validade dos códigos pode mudar.</p>
+</main>
+<footer class="wrap">Fisch Codes · Feito por fãs para a comunidade 🎣</footer>
+<script src="app.js"></script>
+</body></html>
